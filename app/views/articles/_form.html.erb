@@ -16,6 +16,11 @@
     <%= form.text_field :title %>
   </div>
 
+  <div class="field">
+      <%= form.label :body %>
+      <%= form.rich_text_area :body, placeholder: "Type here..." %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
