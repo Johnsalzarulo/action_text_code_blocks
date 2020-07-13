@@ -1,7 +1,4 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-
-two:
-  title: MyString
+test_html_article:
+  title: "Here's a test rich text article"

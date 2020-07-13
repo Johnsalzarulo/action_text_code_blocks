@@ -1,4 +1,5 @@
-# one:
-#   record: name_of_fixture (ClassOfFixture)
-#   name: content
-#   body: <p>In a <i>million</i> stars!</p>
+test_html_article:
+  record: test_html_article
+  record_type: Article
+  name: body
+  body: "<div>Whether you’re training for a half-marathon, or just trying to get quick workouts in around your work schedule, having a home gym is the most convenient way to train. But when you’re trying to make sure your home stays warm and inviting it’s not as easy as just buying a treadmill -- you also need to decide how to make the space feel like you (and motivate you to crush that half marathon)!</div><h1>Get Motivated with a Red Home Gym Paint Scheme</h1><div>The best place to start decorating your home gym is by considering paint schemes. For a home gym you’ll want to find a color that will keep you motivated whether it’s early Sunday morning, or right after a long workday. Red is a great choice because it is known to be a motivating color, associated with strength and resilience. If the idea of painting all of your walls red feels too bold, consider adding just one as an accent wall. A warm red is a great option because it easily matches with the silvers and blacks that tend to be prominent in workout equipment. </div><h1>Chill Out in a Green Yoga Room</h1><div>For a home yoga room, you’re going to need some calming colors. Greens and whites are great options for relaxing energy. To keep the space feeling zen, opt for lighter tones like sage green and creamy whites. Inspired by nature, green roots you back to earth and adds a grounding energy for your daily practice. <br><br></div><div>To add depth to your space, consider adding some tall mirrors. Not only with the mirrors make the room feel larger, it will also give you the opportunity to check on your form! Cost-cutting bonus tip: Skip the fancy workout suppliers and buy your full-length mirrors at IKEA.<br><br></div>"

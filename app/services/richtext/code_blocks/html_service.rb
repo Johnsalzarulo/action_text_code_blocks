@@ -37,6 +37,17 @@ class Richtext::CodeBlocks::HtmlService
     [parsed, parsed.errors]
   end
 
+  def self.remove_not_allowed_tags_and_attributes(block, whitelist= ALLOWED_HTML_TAGS)
+    block.children.each do |b|
+      b.xpath('//@*').remove
+      next if b.text?
+      self.remove_not_allowed_tags_and_attributes(b)
+      unless whitelist.include?(b.name)
+        b.remove
+      end
+    end
+    block.to_html
+  end
 
   def self.add_styles_to_tables(html)
     html.search("table").each do |table|

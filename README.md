@@ -1,8 +1,6 @@
 # Action Text Advanced Code Blocks Example [WIP]
 
-[Source](https://www.notion.so/getmainstreet/Articles-Advanced-Code-Blocks-24824061ccfa4c1088e5500fee93f60c#3b350d602237491da0896c17cd1ea82f)
-
-Here at Main Street we have an in house Learning Management system we built in Rails. This Learning Management system allows our content team to create articles, videos and quizzes for new business owners to learn all they need to learn to start and run new businesses.
+I work on an in house Learning Management system built in Rails. This Learning Management system allows our content team to create articles, videos and quizzes for new business owners to learn all they need to learn to start and run new businesses.
 
 Since were on rails and we needed rich text editing we reached for [Action Text](https://edgeguides.rubyonrails.org/action_text_overview.html) which essentially gives you the solid [Trix editor](https://trix-editor.org/) plug and play.
 
@@ -45,7 +43,7 @@ class Richtext::CodeBlocks::HtmlService
   ALLOWED_HTML_TAGS = ["table", "tr", "td", "th", "col", "pre", "p", "h1", "h2", "h3", "summary", "details", "row", "code"]
   ALLOWED_HTML_ATTRIBUTES = []
 
-  # To Validate HTML tags and protect from bad misformated input
+  # To Validate HTML tags and protect from bad formatted input
   def self.validate(html)
     errors = []
     html = Nokogiri::HTML::DocumentFragment.parse(html)
@@ -104,3 +102,53 @@ class Richtext::CodeBlocks::HtmlService
 end
 
 ```
+
+### Using the HtmlService
+
+You can just add a method in the article model:
+
+```ruby
+def formatted_body
+  Richtext::CodeBlocks::HtmlService.render(self.body.to_s).html_safe
+end
+
+```
+
+and then call it in the view
+
+```erb
+  <%= @article.formatted_body %>
+```
+
+### Screenshots
+
+Here's the example of the editor with code blocks:
+![Example input](public/examples/trixinput.png)
+
+Here's the example output of that article:
+![Example output](public/examples/public/examples/renderedoutput.png)
+
+Here's example validation being thrown to prevent you from saving bad HTML.
+![Example output](public/examples/public/examples/validation.png)
+
+## In Production
+
+Obviously this repo is a very limited example, but used well in production with an extended CSS framework this can be pretty powerful in practice:
+
+![Example input](public/examples/productionexample1.png)
+![Example input](public/examples/productionexample2.png)
+
+Would love feedback / thoughts here via issues / PR's or via email
+
+# Getting this Repo up and running
+
+This repository has a `bin/setup` script that should get things up and running for the majority of users if you have the above dependencies installed.
+
+From the root of the project directory - run:
+
+`bin/setup`
+
+Once that runs you should be able to run the following 2 commands in separate terminal tabs / windows:
+
+1.  `rails s` - this will start the rails server on your local machine.
+2.  `bin/webpack-dev-server` - this will start to watch and recompile the JavaScripts found in `app/javascript`
