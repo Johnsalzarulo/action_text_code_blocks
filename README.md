@@ -126,10 +126,10 @@ Here's the example of the editor with code blocks:
 ![Example input](public/examples/trixinput.png)
 
 Here's the example output of that article:
-![Example output](public/examples/public/examples/renderedoutput.png)
+![Example output](/public/examples/renderedoutput.png)
 
 Here's example validation being thrown to prevent you from saving bad HTML.
-![Example output](public/examples/public/examples/validation.png)
+![Example output](public/examples/validation.png)
 
 ## In Production
 
