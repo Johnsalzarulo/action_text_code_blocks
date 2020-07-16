@@ -136,7 +136,7 @@ Here's example validation being thrown to prevent you from saving bad HTML.
 Obviously this repo is a very limited example, but used well in production with an extended CSS framework this can be pretty powerful in practice:
 
 ![Example input](public/examples/productionexample1.png)
-![Example input](public/examples/productionexample2.png)
+![Example input](public/examples/produtionexample2.png)
 
 Would love feedback / thoughts here via issues / PR's or via email
 
