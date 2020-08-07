@@ -1,18 +1,18 @@
-# Action Text Advanced Code Blocks Example [WIP]
+# Action Text Advanced Code Blocks Example
 
-I work on an in house Learning Management system built in Rails. This Learning Management system allows our content team to create articles, videos and quizzes for new business owners to learn all they need to learn to start and run new businesses.
+I work on an in house Learning Management system built in Rails. This Learning Management system allows our content team to create articles, videos and quizzes. This content is delivered through lssons for new business owners. Through these tracks they learn all they need to learn to start and run new service businesses.
 
-Since were on rails and we needed rich text editing we reached for [Action Text](https://edgeguides.rubyonrails.org/action_text_overview.html) which essentially gives you the solid [Trix editor](https://trix-editor.org/) plug and play.
+Since were on rails and we needed rich text editing we reached for [Action Text](https://edgeguides.rubyonrails.org/action_text_overview.html). Action Text gives you the solid [Trix editor](https://trix-editor.org/) plug and play in your app. 
 
 _Rails Action Text in Practice in our Content Library Back-end_
 
 ### However: Action Text / Trix doesn't support tables.
 
-Our content team had lots of tables of information they wanted to be able to communicate. Sometimes it's hard to get across nuanced information for estimating and process without a table.
+Our content team had lots of tables of information they wanted to be able to communicate. Sometimes it's hard to get across nuanced information for estimating and process without a table. We realized we needed table support in Action Text / Trix. 
 
 ### First Direction — Action Text Attachments
 
-My first path was to extend the Action Text attachment model the way that the [team at Timelapse documented](https://readtimelapse.com/how-we-built-table-support-for-trix-editor-cd4f14c03463). Although they provided some good direction, there was nothing I could directly leverage and this seems like a lot of front end complexity for a v1 of a product. Was looking for something similar. In this research I found this great [Rails Conf video](https://www.youtube.com/watch?v=2iGBuLQ3S0c) from Chris Oliver of Go Rails, a strongly recommended resource on Action Text attachments in general.
+My first path was to extend the Action Text attachment model. This is what the [team at Timelapse documented](https://readtimelapse.com/how-we-built-table-support-for-trix-editor-cd4f14c03463). Although they provided some good direction, there was nothing I could directly leverage. Also, this seems like a lot of front end complexity for a v1 of a product. Was looking for something similar. In this research I found this great [Rails Conf video](https://www.youtube.com/watch?v=2iGBuLQ3S0c) from Chris Oliver of Go Rails, a strongly recommended resource on Action Text attachments in general. However, decided against doing something so front end heavy (for now). 
 
 ## The Crazy Idea: Render Code-blocks as HTML
 
