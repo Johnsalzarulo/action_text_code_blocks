@@ -152,3 +152,7 @@ Once that runs you should be able to run the following 2 commands in separate te
 
 1.  `rails s` - this will start the rails server on your local machine.
 2.  `bin/webpack-dev-server` - this will start to watch and recompile the JavaScripts found in `app/javascript`
+
+
+### More Discussion / Context 
+Write this all up in a [Dev.to post](https://dev.to/mainstreet/tables-and-other-advanced-formatting-in-action-text-kind-of-1dbn)
